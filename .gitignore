@@ -1,0 +1,32 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.npm/*
+!.npm/patches
+!.npm/plugins
+!.npm/releases
+!.npm/versions
+
+# testing
+/coverage
+
+# build
+/dist
+
+# debug
+npm-debug.log*
+npm-debug.log*
+npm-error.log*
+
+# env files (can opt-in for commiting if needed)
+.env.local
+
+# upload files
+/assets/employee/*
+!/assets/employee/.gitkeep
+/assets/avatar/*
+!/assets/avatar/.gitkeep
+/generated/prisma
