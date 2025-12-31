@@ -7,7 +7,8 @@
     "build": "tsc",
     "start": "cross-env NODE_ENV=production node dist/index.js",
     "dev": "cross-env NODE_ENV=development concurrently \"tsc --watch\" \"nodemon -q dist/index.js\"",
-    "prisma:generate": "prisma generate"
+    "prisma:generate": "prisma generate",
+    "prisma:seed": "ts-node prisma/seed.ts"
   },
   "keywords": [],
   "author": "Rakasiwi Surya",
@@ -19,7 +20,6 @@
     "bcrypt": "^6.0.0",
     "bullmq": "^5.66.4",
     "cors": "^2.8.5",
-    "crypto-js": "^4.2.0",
     "dotenv": "^17.2.3",
     "express": "^5.2.1",
     "ioredis": "^5.8.2",
@@ -30,11 +30,11 @@
   "devDependencies": {
     "@types/bcrypt": "^6.0.0",
     "@types/cors": "^2.8.19",
-    "@types/crypto-js": "^4.2.2",
     "@types/express": "^5.0.6",
     "@types/jsonwebtoken": "^9.0.10",
     "@types/node": "^25.0.3",
     "@types/pg": "^8.16.0",
+    "concurrently": "^9.2.1",
     "cross-env": "^10.1.0",
     "nodemon": "^3.1.11",
     "prisma": "^7.2.0",
